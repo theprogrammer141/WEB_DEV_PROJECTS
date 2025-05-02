@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex justify-center items-center min-h-screen bg-slate-900">
+    <div class="bg-slate-600 rounded-lg shadow-2xl max-w-full p-6">
+      <h1 class="font-bold font-mono text-3xl text-white mb-4 p-4 text-center">
+        Weather App
+      </h1>
+
+      <form class="flex gap-2 mb-6">
+        <input
+          type="search"
+          id="city-input"
+          placeholder="Search Location..."
+          class="bg-slate-400 text-white font-semibold rounded-md shadow-md p-2 outline-none"
+        />
+        <button
+          type="button"
+          id="get-button-input"
+          class="bg-gradient-to-r from-gray-500 to-gray-950 rounded-md p-3 text-white hover:bg-gradient-to-l hover:from-black hover:to-white cursor-pointer font-semibold"
+        >
+          Search
+        </button>
+      </form>
+
+      <div id="weather-info" class="hidden">
+        <h2
+          id="city-name"
+          class="text-white text-2xl text-center font-semibold"
+        ></h2>
+        <p id="temperature" class="text-white text-center"></p>
+        <p id="description" class="text-white text-center"></p>
+      </div>
+
+      <p id="error-message" class="text-white text-center hidden">
+        City not found. Please try again!
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
