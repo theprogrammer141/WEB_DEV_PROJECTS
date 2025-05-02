@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const descriptionDisplay = document.getElementById("description");
   const errorMessage = document.getElementById("error-message");
 
-  const API_KEY = "209f57a58fac435fee76cbafce38438f";
+  const API_KEY = "abc";
 
   getButtonInput.addEventListener("click", async () => {
     const city = cityInput.value.trim();
