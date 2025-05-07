@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex justify-center items-center bg-black min-h-screen">
+    <div
+      class="bg-slate-500 max-w-full max-h-full text-white rounded-lg shadow-2xl p-4 mb-6"
+    >
+      <h1 class="text-center text-3xl font-bold font-mono p-2 mb-4">
+        Expense Tracker
+      </h1>
+
+      <form id="expense-form" class="flex gap-2 p-2 mb-6">
+        <input
+          id="expense-name"
+          type="text"
+          placeholder="Enter name"
+          class="outline-1 outline-slate-400 rounded-md p-2 w-50 shadow-lg"
+          required
+        />
+        <input
+          id="expense-amount"
+          type="text"
+          placeholder="Enter amount"
+          class="outline-1 outline-slate-400 rounded-md p-2 w-50 shadow-lg"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-black p-2 rounded-md shadow-lg cursor-pointer hover:bg-white hover:text-black hover:transition hover:delay-75"
+        >
+          Add Expense
+        </button>
+      </form>
+
+      <h2 class="text-2xl font-semibold font-mono text-center">Expenses</h2>
+      <ul id="expense-list">
+        <!-- Will be added dynamically -->
+      </ul>
+
+      <div id="total" class="text-center">
+        <h3>Total: $<span id="total-amount">0.00</span></h3>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
