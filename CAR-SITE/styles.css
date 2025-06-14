@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+
+header {
+  background-image: url("car-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  padding: 0px 150px;
+}
+
+footer {
+  padding: 0px 150px;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.item h5 {
+  color: #00c2ff;
+}
+
+.item p {
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  align-items: center;
+}
+
+.nav .logo {
+  color: white;
+  font-size: 40px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+button {
+  background-color: #00c2ff;
+  color: white;
+  border: none;
+  padding: 16px;
+}
+
+.content {
+  margin-top: 200px;
+  color: white;
+}
+
+.content h1 {
+  font-size: 35px;
+  color: #00c2ff;
+  margin-bottom: 0px;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+.content button {
+  font-size: 20px;
+}
