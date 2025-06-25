@@ -11,6 +11,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 body {
@@ -41,6 +43,13 @@ p {
 
 img {
   width: 100%;
+}
+
+pre,
+code {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
 
 /* Navbar */
@@ -89,6 +98,10 @@ img {
   overflow: visible;
 }
 
+.showcase-text {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 .showcase-form {
   position: relative;
   top: 60px;
@@ -97,6 +110,7 @@ img {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .showcase-form .form-control {
@@ -186,9 +200,131 @@ img {
   transform: translateY(-15px);
 }
 
+/* Features */
+.features-head .container,
+.docs-head .container {
+  justify-content: space-between;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.features-head img,
+.docs-head img {
+  width: 200px;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.features-sub-head .container {
+  justify-content: space-between;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.features-sub-head img {
+  width: 300px;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.features-main .container {
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.features-main .card > i {
+  margin-right: 20px;
+}
+
+.features-main .card {
+  padding: 20px;
+  height: 200px;
+  width: 500px;
+}
+
+.features-main .card-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+/* Docs */
+.docs-main .container {
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.docs-main .card-1 {
+  width: 600px;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.docs-main .card-2 {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
 /* Footer */
 .footer .social a {
   margin: 0 10px;
+}
+
+/* Animations */
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Tablets and under */
@@ -197,7 +333,10 @@ img {
   .showcase .flex,
   .stats .flex,
   .cli .flex,
-  .cloud .flex {
+  .cloud .flex,
+  .features-main .flex,
+  .docs-main,
+  .flex {
     flex-direction: column;
   }
 
@@ -221,18 +360,21 @@ img {
   .showcase-text {
     text-align: center;
     margin-top: 40px;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   .showcase-form {
     justify-self: center;
     margin: auto;
     max-width: 400px;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   .languages .container {
     flex-direction: row;
   }
 
+  /*  Footer*/
   .footer h1,
   .footer p {
     text-align: center;
@@ -250,6 +392,37 @@ img {
 
   .footer .social {
     margin-top: 15px;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .features-main .card-container {
+    flex-direction: column;
+  }
+
+  .features-main .card-container .card {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .docs-main .container {
+    overflow-x: hidden;
+  }
+  .docs-main .card {
+    width: 100%;
   }
 }
 
