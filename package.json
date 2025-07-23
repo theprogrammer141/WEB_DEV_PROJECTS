@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "postcss src/input.css -o dist/output.css --watch",
+    "build": "postcss src/input.css -o dist/output.css"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  }
+}
